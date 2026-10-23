@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101018">
+  <meta name="description" content="Ulu Şair Usame Hazretleri'nin unutulmaz nasihatleri, hayat dersleri ve yazılım felsefesi.">
+  <title>Ulu Şair Usame Hazretleri — Hikmet Arşivi</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101018; --panel:#191925; --gold:#f4c76b; --muted:#b9b7c8; --ink:#f8f6ff; --line:#353344; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:radial-gradient(ellipse at top, #29213b 0%, var(--bg) 52%); color:var(--ink); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; }
+    header { text-align:center; padding:76px 20px 52px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:800; }
+    h1 { max-width:900px; margin:12px auto; font-size:clamp(2.2rem,7vw,5rem); line-height:1.04; letter-spacing:-.04em; }
+    header p { max-width:650px; margin:18px auto 0; color:var(--muted); font-size:1.12rem; }
+    .actions { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    button { border:1px solid var(--gold); background:var(--gold); color:#21182a; padding:12px 18px; border-radius:999px; font-weight:800; cursor:pointer; font-size:.95rem; }
+    button.secondary { background:transparent; color:var(--ink); border-color:var(--line); }
+    button:hover { transform:translateY(-1px); }
+    main { width:min(1100px, calc(100% - 32px)); margin:0 auto 70px; }
+    .section-title { margin:20px 0 8px; font-size:1.6rem; }
+    .intro { color:var(--muted); margin:0 0 24px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:18px; }
+    .quote { background:linear-gradient(145deg,rgba(31,29,47,.96),rgba(21,21,32,.96)); border:1px solid var(--line); border-radius:20px; padding:24px; box-shadow:0 12px 40px #0002; display:flex; flex-direction:column; min-height:220px; }
+    .quote .mark { color:var(--gold); font-size:2.2rem; line-height:1; }
+    blockquote { margin:12px 0 18px; font-size:1.13rem; font-weight:650; flex:1; }
+    .attribution { color:var(--muted); font-size:.9rem; }
+    .tag { display:inline-block; border:1px solid #65553a; color:var(--gold); padding:3px 9px; border-radius:999px; font-size:.75rem; margin-top:12px; width:max-content; }
+    .feature { margin-top:24px; padding:26px; border-radius:20px; background:#171722; border:1px solid var(--line); }
+    .feature h2 { margin-top:0; }
+    .feature p { color:var(--muted); }
+    footer { text-align:center; color:var(--muted); border-top:1px solid var(--line); padding:26px 16px 40px; font-size:.9rem; }
+    .toast { min-height:1.5em; color:var(--gold); text-align:center; margin-top:12px; }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto} button:hover{transform:none} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Hikmet • Felsefe • Kodlama</div>
+    <h1>Ulu Şair<br><span style="color:var(--gold)">Usame Hazretleri</span></h1>
+    <p>Hayatın içinden nasihatler, yazılım dünyasından dersler ve unutulmaz sözler. Kase doluyor, kodlar derleniyor, hikmet yayılıyor.</p>
+    <div class="actions">
+      <button onclick="document.getElementById('sozler').scrollIntoView({behavior:'smooth'})">Hikmetleri keşfet ↓</button>
+      <button class="secondary" onclick="sharePage()">Dünyaya duyur ↗</button>
+    </div>
+    <div class="toast" id="status" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <section id="sozler">
+      <h2 class="section-title">📜 Büyük Hikmet Arşivi</h2>
+      <p class="intro">Bazısı derin, bazısı düşündürücü… Bazısı da anten gerektirir.</p>
+      <div class="grid">
+        <article class="quote"><div class="mark">“</div><blockquote>Boş duran insan boş bir kasedir; çalıştıkça dolar, doldukça kıymeti artar, kıymeti arttıkça daha çok çalışmak ister ve böylece yükselir.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Motivasyon</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Dinlenmeden çalışmak, çalışmadan dinlenmek gibidir.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Denge</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Bizi çekemeyen anten taksın.</blockquote><div class="attribution">— Anonim (alıntıdır)</div><span class="tag">Klasik</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Her proje bir canlı gibidir; gelişir, büyür ve sonra da yaşlanır, paslanır olur.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Yazılım felsefesi</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Nereye gidersen git, götün hep arkandadır.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Değişmeyen gerçekler</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Şimdi bak güzel kardeşim, sana bir nasihat: Sakın kendinle bir tartışmaya girme, çünkü kazananı hep sen olacaksın.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Kişisel gelişim</span></article>
+        <article class="quote"><div class="mark">“</div><blockquote>Bizi unutanların hep akıllarında sabahladık yau.</blockquote><div class="attribution">— Ulu Şair Usame Hazretleri</div><span class="tag">Gece düşünceleri</span></article>
+      </div>
+    </section>
+    <section class="feature">
+      <h2>💻 Yazılımcının manifestosu</h2>
+      <p>Hayat bug verir. Biz debug ederiz. Projeler yaşlanabilir ama merak, üretme isteği ve kahve kokusu kolay kolay eskimez.</p>
+      <p><strong>Altın kural:</strong> Kod paslanır; yazılımcının deliliği paslanmaz.</p>
+    </section>
+    <section class="feature">
+      <h2>🌍 Bu hikmetleri paylaş</h2>
+      <p>Bu sayfa tek bir HTML dosyasıdır. Dosyayı bir web barındırma servisine yükleyerek herkese açık bir bağlantı oluşturabilirsin. “Dünyaya duyur” düğmesi de cihazın destekliyorsa paylaşım menüsünü açar.</p>
+      <div class="actions">
+        <button onclick="sharePage()">Paylaş ↗</button>
+        <button class="secondary" onclick="copyQuote()">Bir hikmeti kopyala ✍️</button>
+      </div>
+      <div class="toast" id="copyStatus" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer>© Hikmet Arşivi • Sevgiyle, kodla ve biraz da mizahla üretildi 😎</footer>
+  <script>
+    async function sharePage() {
+      const data = { title: document.title, text: 'Ulu Şair Usame Hazretleri’nin hikmet arşivi!', url: location.href };
+      const status = document.getElementById('status');
+      try {
+        if (navigator.share && location.protocol !== 'file:') {
+          await navigator.share(data);
+        } else if (navigator.clipboard && location.protocol !== 'file:') {
+          await navigator.clipboard.writeText(location.href);
+          status.textContent = 'Bağlantı kopyalandı! Şimdi dostlarına gönder 😎';
+        } else {
+          status.textContent = 'Siteyi internete yükleyince oluşan bağlantıyı buradan paylaşabilirsin.';
+        }
+      } catch (e) {
+        if (e.name !== 'AbortError') status.textContent = 'Paylaşım açılamadı; site bağlantısını kopyalayıp gönderebilirsin.';
+      }
+    }
+    async function copyQuote() {
+      const quotes = [
+        'Boş duran insan boş bir kasedir; çalıştıkça dolar, doldukça kıymeti artar, kıymeti arttıkça daha çok çalışmak ister ve böylece yükselir.',
+        'Dinlenmeden çalışmak, çalışmadan dinlenmek gibidir.',
+        'Bizi çekemeyen anten taksın.',
+        'Her proje bir canlı gibidir; gelişir, büyür ve sonra da yaşlanır, paslanır olur.',
+        'Nereye gidersen git, götün hep arkandadır.',
+        'Sakın kendinle bir tartışmaya girme, çünkü kazananı hep sen olacaksın.',
+        'Bizi unutanların hep akıllarında sabahladık yau.'
+      ];
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      const out = document.getElementById('copyStatus');
+      try { await navigator.clipboard.writeText('“' + q + '” — Ulu Şair Usame Hazretleri'); out.textContent = 'Hikmet kopyalandı. Git ve dünyayı aydınlat! 📜'; }
+      catch (e) { out.textContent = 'Tarayıcı kopyalamaya izin vermedi. Sözü elle seçip kopyalayabilirsin: “' + q + '”'; }
+    }
+  </script>
+</body>
+</html>
